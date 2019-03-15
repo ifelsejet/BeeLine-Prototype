@@ -43,7 +43,7 @@ class Target:
             cv.inRange(hsv_img,(165,145,100),(250,210,160),threshold_img1) #red
             cv.inRange(hsv_img,(0,145,100),(10,210,160),threshold_img1a)   #red again
             cv.add(threshold_img1,threshold_img1a,threshold_img1)          #this is combining the two limits for red
-            cv.inRange(hsv_img,(105,180,40),(120,260,100),threshold_img2)  #blue
+            cv.inRange(hsv_img,(105,180,40),(120,300,100),threshold_img2)  #blue
  
  
             #determine the moments of the two objects
