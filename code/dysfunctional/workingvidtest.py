@@ -6,7 +6,7 @@ cap = cv2.VideoCapture(1)
 #out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640.480))
 
 while True:
-    ret, frame = video_capture.read()
+    ret, frame = cap.read()
     #frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
