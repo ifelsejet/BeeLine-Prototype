@@ -1,0 +1,16 @@
+import numpy as np 
+import cv2
+
+def onMouse(event, x, y, flags, param):
+    if event == cv2.EVENT_LBUTTONDOWN:
+       # draw circle here (etc...)
+       print('x = %d, y = %d'%(x, y))
+setMouseCallback('WindowName', onMouse')
+
+posList = []
+def onMouse(event, x, y, flags, param):
+   global posList
+   if event == cv2.EVENT_LBUTTONDOWN:
+        posList.append((x, y))
+cv2.setMouseCallback('WindowName', onMouse)
+posNp = numpy.array(posList)     # convert to numpy for other usages
